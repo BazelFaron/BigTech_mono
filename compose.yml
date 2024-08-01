@@ -1,0 +1,23 @@
+# Файл docker-compose должен начинаться с тега версии.
+# Мы используем "3" так как это - самая свежая версия на момент написания этого кода.
+
+version: "3"
+
+# Следует учитывать, что docker-composes работает с сервисами.
+# 1 сервис = 1 контейнер.
+# Сервисом может быть клиент, сервер, сервер баз данных...
+# Раздел, в котором будут описаны сервисы, начинается с 'services'.
+
+services:
+  auth:
+    build: services/auth
+  chat:
+    build: services/chat
+  online_discovery:
+    build: services/online_discovery
+  subscribe:
+    build: services/subscribe
+  user_profile:
+    build: services/user_profile
+
+  
